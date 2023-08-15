@@ -1,0 +1,35 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+void printVec1(vector<int> &a){  //providing reference variable is flexible 
+    cout<<"Vector v:"<<endl;
+    for(int f=0;f<a.size();++f){
+        cout<<a[f]<<" ";
+    }
+    a.push_back(9);
+    cout<<endl;
+}
+void printVec2(vector<int> &b){
+    cout<<"Vector v2:"<<endl;
+    for(int k=0;k<b.size();++k){
+        cout<<b[k]<<" ";
+    }cout<<endl;
+}
+
+int main() {
+    // Write C++ code here
+    vector<int> v;
+    v.push_back(3);
+    v.push_back(10);
+    v.push_back(2);
+    v.pop_back(); //0(1) time complexity
+    vector<int> v2=v;// copying vector into another vector,time complexity 0(n)
+    v2.push_back(4);
+    v.push_back(89);
+    v2.push_back(2);
+    v2.pop_back();
+    printVec1(v);
+    printVec2(v2);
+    printVec1(v);
+}
