@@ -1,0 +1,26 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+void printVec(vector<int> v){
+    cout<<"Your vector:"<<endl;
+  for(int i=0;i<v.size(); ++i){
+    //v.size O(1)
+    cout<<v[i]<<" ";
+  }
+  cout<<endl;
+}
+
+int main() {
+  int a[10];    //allocates 10 memory blocks
+  vector<int> b;//dynamically allocates memory blocks when it's running
+  int n;//declaring size
+  cout<<"Enter size of vector:";
+  cin>>n;     //taking input(size of vector)
+  cout<<"Enter elements in vector:";
+  for(int i=0;i<n;i++){
+    int x;              //variable storing integers in vector
+    cin>>x;             //inserting integers in vector
+    b.push_back(x);
+  }
+  printVec(b);
+}
